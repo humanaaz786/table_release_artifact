@@ -1,0 +1,20 @@
+﻿access_group,model,split,rows,expected_rows,coverage,status,note
+closed,Gemini Pro,handwritten,919,919,1.0,ok:910; empty_prediction:9,full clean-ish
+closed,Gemini Pro,printed,11392,11392,1.0,ok:11271; empty_prediction:121,full printed run; budget-error rows backfilled from older Gemini Pro output
+closed,GPT-5.4 mini,handwritten,919,919,1.0,ok:919,full
+closed,GPT-5.4 mini,printed,11392,11392,1.0,ok:11392,partial/running if rows<11392
+open/general,Qwen 8B,handwritten,919,919,1.0,ok:919,full
+open/general,Qwen 8B,printed,11392,11392,1.0,ok:11392,full
+open/general,Qwen 32B,handwritten,919,919,1.0,ok:919,full
+open/general,Qwen 32B,printed,11392,11392,1.0,ok:11392,full
+open/general,EasyOCR,handwritten,919,919,1.0,ok:918; empty_prediction:1,full local
+open/general,EasyOCR,printed,11392,11392,1.0,ok:11372; empty_prediction:20,full local
+open/general,Gemma-3-27B,handwritten,919,919,1.0,ok:919,full
+open/general,Gemma-3-27B,printed,11392,11392,1.0,ok:11150; empty_prediction:197; error:45,full strict prompt
+arabic-specialized,Qari-OCR v0.3,handwritten,919,919,1.0,ok:913; error:6,"full, html stripped"
+arabic-specialized,Qari-OCR v0.3,printed,11392,11392,1.0,ok:11379; error:5; empty_prediction:8,"full, html stripped"
+arabic-specialized,AIN 7B,printed,11392,11392,1.0,ok:11392,full after five-row retry
+arabic-specialized,AIN 7B,handwritten,919,919,1.0,ok:919,merged original+A4500 retry+A100 retry
+closed,Gemini Flash,handwritten,919,not same split,1.0,ok:915; unknown:3; error:1,standardized 919-row handwritten subset from raw Flash file
+closed,Gemini Flash,printed,7819,not same split,unknown,eval table,existing eval table; dataset size differs
+open_access,Qwen2.5-VL-72B,handwritten,919,919,1.0,ok:919,full 919-row handwritten run via OpenRouter

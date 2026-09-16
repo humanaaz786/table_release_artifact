@@ -1,0 +1,5 @@
+source,table,rows_validated,fields_per_data_row,status
+overall_metrics.csv,overall_metrics,19,11,pass
+printed_by_font_metrics.csv,printed_closed,16,11,pass
+printed_by_font_metrics.csv,printed_open/general,32,11,pass
+printed_by_font_metrics.csv,printed_arabic-specialized,16,11,pass

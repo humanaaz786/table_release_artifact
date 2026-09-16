@@ -1,0 +1,51 @@
+\begin{table*}[t]
+\centering
+\scriptsize
+\caption{Handwritten output-outcome audit over 919 attempted inputs per complete model. Coverage excludes only provider/API failures; all other rates use the attempted-input denominator. Generative violations are the union of repetitive, non-Arabic/unrelated, and overlong outputs.}
+\label{tab:app_handwritten_outcomes}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrrrr}
+\toprule
+\textbf{Model} & \textbf{Coverage} & \textbf{Valid} & \textbf{Empty} & \textbf{Format} & \textbf{Gen. viol.} & \textbf{Provider} & \textbf{Refusal}\\
+\midrule
+AIN 7B & 1.000 & 0.978 & 0.000 & 0.000 & 0.021 & 0.000 & 0.001\\
+EasyOCR & 1.000 & 0.993 & 0.001 & 0.002 & 0.003 & 0.000 & 0.000\\
+GPT-5.4 Mini & 1.000 & 0.985 & 0.000 & 0.002 & 0.012 & 0.000 & 0.001\\
+Gemini 2.5 Flash & 0.999 & 0.972 & 0.002 & 0.000 & 0.024 & 0.001 & 0.001\\
+Gemini 2.5 Pro & 1.000 & 0.966 & 0.010 & 0.000 & 0.024 & 0.000 & 0.000\\
+Gemma-3-27B & 1.000 & 0.897 & 0.000 & 0.000 & 0.103 & 0.000 & 0.000\\
+Qari-OCR v0.3 & 0.993 & 0.862 & 0.000 & 0.000 & 0.132 & 0.007 & 0.000\\
+Qwen2.5-VL-72B & 1.000 & 0.978 & 0.000 & 0.000 & 0.022 & 0.000 & 0.000\\
+Qwen3-VL-32B & 1.000 & 0.974 & 0.000 & 0.000 & 0.026 & 0.000 & 0.000\\
+Qwen3-VL-8B & 1.000 & 0.976 & 0.000 & 0.000 & 0.024 & 0.000 & 0.000\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\scriptsize
+\caption{All-attempt and conditional-valid handwritten OCR accuracy. All-attempt metrics retain every attempted input; conditional-valid metrics retain only outputs in the valid-transcription category. Lower CER/WER is better.}
+\label{tab:app_handwritten_conditional_accuracy}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrrr}
+\toprule
+\textbf{Model} & \multicolumn{3}{c}{\textbf{All attempted}} & \multicolumn{3}{c}{\textbf{Conditional valid}}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+& \textbf{CER} & \textbf{WER} & \textbf{EM} & \textbf{CER} & \textbf{WER} & \textbf{EM}\\
+\midrule
+AIN 7B & 0.070 & 0.250 & 0.194 & 0.071 & 0.249 & 0.192\\
+EasyOCR & 0.491 & 1.123 & 0.000 & 0.490 & 1.122 & 0.000\\
+GPT-5.4 Mini & 0.339 & 0.754 & 0.007 & 0.338 & 0.753 & 0.007\\
+Gemini 2.5 Flash & 0.312 & 0.464 & 0.055 & 0.176 & 0.459 & 0.057\\
+Gemini 2.5 Pro & 0.602 & 0.741 & 0.020 & 0.591 & 0.732 & 0.020\\
+Gemma-3-27B & 0.879 & 1.254 & 0.003 & 0.680 & 1.049 & 0.004\\
+Qari-OCR v0.3 & 0.678 & 1.144 & 0.003 & 0.558 & 0.991 & 0.004\\
+Qwen2.5-VL-72B & 0.380 & 0.687 & 0.014 & 0.372 & 0.685 & 0.014\\
+Qwen3-VL-32B & 0.576 & 0.821 & 0.010 & 0.544 & 0.804 & 0.010\\
+Qwen3-VL-8B & 0.479 & 0.757 & 0.008 & 0.471 & 0.749 & 0.008\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

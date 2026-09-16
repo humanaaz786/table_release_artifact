@@ -1,0 +1,12 @@
+{
+  "bootstrap_unit": "line identifier; independent nonparametric resampling with replacement within each model--split",
+  "bootstrap_replicates": 10000,
+  "confidence_level": 0.95,
+  "ci_method": "percentile",
+  "paired_design": "matched line identifiers; paired bootstrap difference and two-sided random sign-flip test",
+  "sign_flip_draws": 20000,
+  "alternative": "two-sided",
+  "multiple_testing": "Holm adjustment across all 18 pre-specified paired tests",
+  "seed": 20260915,
+  "model_reruns": "No repeated API runs; line-level intervals condition on the recorded outputs and exclude provider temporal variability."
+}
